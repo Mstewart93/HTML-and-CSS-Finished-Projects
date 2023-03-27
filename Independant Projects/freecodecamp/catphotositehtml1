@@ -1,0 +1,94 @@
+
+<h2>Cat Form</h2>
+        <form action="https://freecatphotoapp.com/submit-cat-photo"> <!--This tells it where to submit the form -->
+<input type="text" name="catphotourl" placeholder="cat photo URL" required> <!--The required part will make it so they have to fill it out-->
+
+<!--Even though you added your button below the text input, they appear next to each other on the page. That's because both input and button elements are inline elements, 
+The button you added will submit the form by default. However, relying on default behavior may cause confusion. Add the type attribute with the value submit to the button 
+to make it clear that it is a submit button.-->
+
+<button type="submit">Submit</button>
+
+<!--You can use radio buttons for questions where you want only one answer out of multiple options.-->
+
+<input type="radio"> Indoor
+
+<!--label elements are used to help associate the text for an input 
+element with the input element itself (especially for assistive technologies like screen readers). -->
+
+<label><input type="radio">Outdoor</label>
+
+<!--To make it so selecting one radio button automatically deselects the other, 
+    both buttons must have a name attribute with the same value-->
+   <br>
+    <label><input id="indoor" type="radio" name="indoor-outdoor"> Indoor</label>
+    <label><input id="outdoor" type="radio" name="indoor-outdoor"> Outdoor</label>
+
+
+<!--If you select the Indoor radio button and submit the form, the form data for the button is based on its name and value attributes. 
+    Since your radio buttons do not have a value attribute, the form data will include indoor-outdoor=on, which is not useful when you 
+    have multiple buttons.
+
+Add a value attribute to both radio buttons. For convenience, set the button's value attribute to the same value as its id attribute.-->
+
+<br>
+<label><input id="indoor" type="radio" name="indoor-outdoor" value="indoor"> Indoor</label>
+<label><input id="outdoor" type="radio" name="indoor-outdoor" value="outdoor"> Outdoor</label>
+
+
+<!--The fieldset element is used to group related inputs and labels together in a web form. 
+    fieldset elements are block-level elements, meaning that they appear on a new line.-->
+
+    <fieldset>
+        <label><input id="indoor" type="radio" name="indoor-outdoor" value="indoor"> Indoor</label>
+        <label><input id="outdoor" type="radio" name="indoor-outdoor" value="outdoor"> Outdoor</label>
+      </fieldset>
+<!--The legend element acts as a caption for the content in the fieldset element. 
+    It gives users context about what they should enter into that part of the form.-->
+
+      <fieldset>
+        <legend> Is your cat an indoor or outdoor cat? </legend>
+        <label><input id="indoor" type="radio" name="indoor-outdoor" value="indoor"> Indoor</label>
+        <label><input id="outdoor" type="radio" name="indoor-outdoor" value="outdoor"> Outdoor</label>
+        <label><input id="consent" type="checkbox" required> By checking this I agree to the terms and conditions. </label>
+      </fieldset>
+
+      <button type="submit">Submit</button>
+
+      <!--Add the name attribute with the value personality to the checkbox input element.
+
+While you won't notice this in the browser, doing this makes it easier for a server to process your web form,
+ especially when there are multiple checkboxes.
+-->
+
+<!--Add another checkbox after the one you just added. The id attribute value should be lazy and the name attribute value should be the same as the last checkbox.
+
+Also add a label element to the right of the new checkbox with the text Lazy. Make sure to associate the label element with the new checkbox using the for attribute.
+
+Submit and go to next challenge
+-->
+
+<input id="loving" type="checkbox" name="personality"> <label for="loving">Loving</label>
+<input id="lazy" type="checkbox" name="personality"> <label for="lazy">Lazy</label>
+
+<!--Like radio buttons, form data for selected checkboxes are name / value attribute pairs. While the value attribute is optional, it's best practice to include it with any checkboxes or radio buttons on the page.
+
+Add a value attribute to each checkbox. For convenience, set each checkbox's value attribute to the same value as its id attribute.-->
+
+<!--n order to make a checkbox checked or radio button selected by default, you need to add the checked attribute to it. There's no need to set a value to the checked attribute. Instead, just add the word checked to the input element, making sure there is space between it and other attributes.
+
+Make the first radio button and the first checkbox selected by default.-->
+
+<legend>Is your cat an indoor or outdoor cat?</legend>
+<label><input id="indoor" type="radio" name="indoor-outdoor" value="indoor" checked> Indoor</label>
+<label><input id="outdoor" type="radio" name="indoor-outdoor" value="outdoor"> Outdoor</label>
+</fieldset>
+<fieldset>
+<legend>What's your cat's personality?</legend>
+<input id="loving" type="checkbox" name="personality" value="loving" checked> <label for="loving">Loving</label>
+<input id="lazy" type="checkbox" name="personality" value="lazy"> <label for="lazy">Lazy</label>
+<input id="energetic" type="checkbox" name="personality" value="energetic"> <label for="energetic"> Energetic</label>
+</fieldset>
+
+<!--This makes it look the same as it does on mobile when in the head element-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />

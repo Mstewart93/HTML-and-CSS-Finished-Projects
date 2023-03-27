@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colored Markers</title>
+    <link rel="stylesheet" href="./marker.css">
+  </head>
+  <body>
+    <h1>CSS Color Markers</h1>
+    <div class="container">
+      <div class="marker one">
+      </div>
+      <div class="marker rose">
+    </div>
+      <div class="marker orange">
+      </div>
+      <div class="marker two">
+      </div>
+      <div class="marker spring">
+
+      </div>
+      <div class="marker chartreuse">
+    </div>
+      <div class="marker three">
+      </div>
+      <div class="marker four">
+      </div>
+      <div class="marker test">
+
+      </div>
+      <div class="marker azure">
+
+      </div>
+      <div class="marker six">
+      </div>
+      <div class="marker violet">
+
+    </div>
+
+    <div class="marker ten">
+
+    </div>
+    
+<!--To create the next secondary color, cyan, update the rgb function in the .two CSS rule to combine pure green and pure blue.-->
+
+<!--Then you can target all the markers, and just target the one, two and three
+-->
+
+<!--Color stops are so so so cool!-->
+
+<!--This is because the default display property for div elements is block. So when two block elements are next to each other, they stack like actual blocks. For example, your marker elements are all stacked on top of each other.
+
+To position two div elements on the same line, set their display properties to inline-block.
+
+Create a new rule to target both the cap and sleeve classes, and set display to inline-block.-->
+
+<!--Step 86
+
+The last thing you'll do is add a slight shadow to each marker to make them look even more realistic.
+
+The box-shadow property lets you apply one or more shadows around an element. Here is basic syntax:
+
+box-shadow: offsetX offsetY color;
+Here's how the offsetX and offsetY values work:
+
+both offsetX and offsetY accept number values in px and other CSS units
+a positive offsetX value moves the shadow right and a negative value moves it left
+a positive offsetY value moves the shadow down and a negative value moves it up
+if you want a value of zero (0) for any or both offsetX and offsetY, you don't need to add a unit. Every browser understands that zero means no change.
+The height and width of the shadow is determined by the 
+The height and width of the shadow is determined by the height and width of the element it's applied to. You can also use an optional spreadRadius value to spread out the reach of the shadow. More on that later.
+
+Start by adding a simple shadow to the red marker.
+
+In the .red CSS rule, add the box-shadow property with the values 5px for offsetX, 5px for offsetY, and red for color.
+
+box-shadow: offsetX offsetY blurRadius spreadRadius color;-->
+
+
+    <h1>CSS Color Markers</h1>
+    <div class="container">
+      <div class="marker red">
+        <div class="cap"></div>
+        <div class="sleeve"></div>
+      </div>
+      <div class="marker green">
+        <div class="cap"></div>
+        <div class="sleeve"></div>
+      </div>
+      <div class="marker blue">
+        <div class="cap"></div>
+        <div class="sleeve"></div>
+      </div>
+    </div>
+  </body>
+</html>
